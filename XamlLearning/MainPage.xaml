@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="XamlLearning.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XamlLearning"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid BorderThickness="2">
+        <Grid.Resources>
+            <Style x:Key="AlternateGridStyle" TargetType="Grid">
+                <Setter Property="Background" Value="#FF08003B"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="BorderThickness" Value="10"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.Style>
+            <StaticResource ResourceKey="AlternateGridStyle"/>
+        </Grid.Style>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="White" Stroke="Black" Opacity="0.195" d:IsLocked="True"/>
+        <Rectangle Fill="White" Stroke="Black" Grid.Column="2" Opacity="0.195" d:IsLocked="True" />
+        <Rectangle Fill="White" Stroke="Black" Grid.Row="1" Grid.Column="1" Opacity="0.195" d:IsLocked="True" />
+        <TextBlock Grid.Column="0" Grid.Row="0" Margin="10" Style="{StaticResource SubheaderTextBlockStyle}"  Foreground="White" Text="Call Method Action" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" Margin="10" Style="{StaticResource SubheaderTextBlockStyle}" Foreground="White" Text="Change Property Action" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="2" Grid.Row="0" Margin="10" Style="{StaticResource SubheaderTextBlockStyle}" Foreground="White" Text="Go to State Action" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Margin="10" Style="{StaticResource SubheaderTextBlockStyle}" Foreground="White" Text="Control Storyboard Action" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Margin="10" Style="{StaticResource SubheaderTextBlockStyle}" Foreground="White" Text="Play Sound Action" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="2" Grid.Row="1" Margin="10" Style="{StaticResource SubheaderTextBlockStyle}" Foreground="White" Text="Navigate to Page Acton" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    
+    </Grid>
+</Page>
